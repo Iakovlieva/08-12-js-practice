@@ -150,12 +150,12 @@ function rootsOfQuadraticEquation(a,b,c)
     if (x2!==null) {console.log('x2 = '+x2); notOnlyToConsole+='\n' + 'x2 = '+ x2;} 
     return notOnlyToConsole;
 }
-
+/*Виклик функції
 let koefA=Number(prompt('Enter "a" koefficient'));
 let koefB=Number(prompt('Enter "b" koefficient'));
 let koefC=Number(prompt('Enter "c" koefficient'));
 
 alert(rootsOfQuadraticEquation(koefA,koefB,koefC));
-
+*/
 
 
