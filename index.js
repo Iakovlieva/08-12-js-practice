@@ -1,10 +1,12 @@
 //1. Написати функцію, яка приймає в якості аргумента висоту прямокутника і його ширину, повертає площу прямокутника.
 
 function RectangleSquare(height,width){
-    return height * width;
+    if ((height>=0) && (width>=0)){
+        return height * width;
+    } else return null;
 }
 /*
-Виклик функції
+//Виклик функції
 let heightOfRectangle;
 let widthOfRectangle;
 
@@ -16,23 +18,27 @@ do {
     widthOfRectangle=Number(prompt('Enter rectangle width'));
 } while ((Number.isNaN(widthOfRectangle)));
 
-alert('The square of this rectangle (h='+heightOfRectangle+', w='+widthOfRectangle+') is: '+RectangleSquare(heightOfRectangle,widthOfRectangle).toFixed(2)+' m2');
-*/
+if (RectangleSquare(heightOfRectangle,widthOfRectangle)!==null)
+{alert('The square of this rectangle (h='+heightOfRectangle+', w='+widthOfRectangle+') is: '+RectangleSquare(heightOfRectangle,widthOfRectangle).toFixed(2)+' m2');
+}else alert('can\'t calculate this Square');
 
+*/
 
 
 
 //2. Написати функцію, яка приймає в якості аргумента діаметр кола і повертає довжину кола (длина окружности по диаметру)
 
 function CircleLength(diameter){
-    return diameter * Math.PI;
+    return (diameter>=0) ? diameter * Math.PI : null;
 }
 /*
-Виклик функції
+//Виклик функції
 let diameterOfCircle=Number(prompt('Enter circle diameter'));
+if (CircleLength(diameterOfCircle)!==null){
 alert('The length of this circle (d='+diameterOfCircle+') is: '+CircleLength(diameterOfCircle).toFixed(2)+' m');
-*/
+} else alert('can\'t calculate this CircleLength');
 
+*/
 
 
 
@@ -40,13 +46,17 @@ alert('The length of this circle (d='+diameterOfCircle+') is: '+CircleLength(dia
 //3. Написати функцію, яка приймає в якості аргумента висоту циліндра та діаметр основи і повертає об'єм циліндра.
 
 function CilindreVolume(diameter,height){
-    return diameter**2 * height * Math.PI / 4;
+    if ((height>=0) && (diameter>=0)){
+        return diameter**2 * height * Math.PI / 4;
+    } else return null;
 }
 /*
-Виклик функції
+//Виклик функції
 let diameterOfCilindre=Number(prompt('Enter cilindre diameter'));
 let heightOfCilindre=Number(prompt('Enter cilindre height'));
+if (CilindreVolume(diameterOfCilindre,heightOfCilindre)!==null){
 alert('The volume of this cilindre (d='+diameterOfCilindre+', h='+heightOfCilindre+') is:'+CilindreVolume(diameterOfCilindre,heightOfCilindre).toFixed(2)+' m3');
+} else alert('can\'t calculate this CilindreVolume');
 */
 
 
